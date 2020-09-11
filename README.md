@@ -16,7 +16,11 @@ The data can be found on the submission's GitHub page: https://github.com/UCSD-A
 
 ## Introduction & Social Case
 
+Few outbreaks in modern history have had as large of a public health and economic effect as Covid-19. While a vaccine is still in progress, physicians need cheap and effective techniques for identifying Covid-19 positive patients. 
+
 ## Data and EDA
+
+The images are collected from COVID19-related papers from medRxiv, bioRxiv, NEJM, JAMA, Lancet, etc. CTs containing COVID-19 abnormalities are selected by reading the figure captions in the papers.
 
 ## Modeling
 
