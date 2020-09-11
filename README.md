@@ -18,11 +18,19 @@ The data can be found on the submission's GitHub page: https://github.com/UCSD-A
 
 Few outbreaks in modern history have had as large of a public health and economic effect as Covid-19. While a vaccine is still in progress, physicians need cheap and effective techniques for identifying Covid-19 positive patients. 
 
+As of Sept 12, 2020, there have been more than 28 million cases and 900,000 deaths related to Covid-19. 
+
 ## Data and EDA
 
 The images are collected from COVID19-related papers from medRxiv, bioRxiv, NEJM, JAMA, Lancet, etc. CTs containing COVID-19 abnormalities are selected by reading the figure captions in the papers.
 
+The dataset contains 349 positive images from 216 patients and 463 negative images. Thus, class imbalance was not a large problem. 
+
+This paper describes the collection and prep steps taken by the authors of the challenge in preparation for its usage in the public sphere: https://arxiv.org/pdf/2003.13865.pdf. 
+
 ## Modeling
+
+Following the CRISP-DM framework for developing models informed from data and social case understanding. My modeling followed an iterative approach and rigorous hypothesis testing utilizing a swath of procedures for improving model performance.
 
 ## Insights & Recommendations
 
