@@ -20,19 +20,34 @@ As of Sept 12, 2020, there have been more than 28 million cases and 900,000 deat
 
 001 allows one to make directories and sort images according once data has been downloaded locally. 002 lets one generate EDA visualizations from local images once sorted. 003 allows for modeling locally utilizing the Keras framework and has functions for performance evaluation and tracking.
 
-## Data and EDA
+## Data Collection
 
 The images are collected from COVID19-related papers from medRxiv, bioRxiv, NEJM, JAMA, Lancet, etc. CTs containing COVID-19 abnormalities are selected by reading the figure captions in the papers.
 
-The dataset contains 349 positive images from 216 patients and 463 negative images. Thus, class imbalance was not a large problem. 
+The dataset contains ___ positive images and ___ negative images from 216 patients.
 
-The data can be found on the submission's GitHub page: https://github.com/UCSD-AI4H/COVID-CT, and the challenge entry is here: https://covid-ct.grand-challenge.org/CT-diagnosis-of-COVID-19/.
+![](Images/class_imbalance.png)
 
-This paper describes the collection and prep steps taken by the authors of the challenge in preparation for its usage in the public sphere: https://arxiv.org/pdf/2003.13865.pdf. 
+The data can be found on the submission's [GitHub page](https://github.com/UCSD-AI4H/COVID-CT), and the [challenge entry site](https://covid-ct.grand-challenge.org/CT-diagnosis-of-COVID-19/) can provide some additional information.
+
+This [paper](https://arxiv.org/pdf/2003.13865.pdf) describes the collection and prep steps taken by the authors of the challenge in preparation for its usage in the public sphere. 
+
+## Exploratory Data Analysis
+
+Here we see some randomly sampled images from each class. 
+
+![](Images/sample_images.png)
+
+I created a "Mean Image" for each class by averaging each pixel across all images in that class. On the left we have the average Covid positive image, and on the right the average Covid negative image. The positive image is much hazier because the presence of Covid-19 infections leave white areas in the affected areas of the lungs. Averaged across all positive images, all areas of the lungs are affected which is why we see haze across the entire image. 
+
+<p float="middle">
+  <img src="Images/Average Covid" width="300" />
+  <img src="Images/Average Not Covid" width="300" />
+</p>
 
 ## Modeling
 
-Following the CRISP-DM framework for developing models informed from data and social case understanding. My modeling followed an iterative approach and rigorous hypothesis testing utilizing a swath of procedures for improving model performance.
+I utilized the Keras framework for developing a CNN model for classifying Covid-19 from patient CT scans. I iteratively expanded the model architecture from simple, single Conv2D layers to multiple sets of Conv2D layer blocks -- where multiple convolutions are performed before a MaxPooling layer. 
 
 ## Insights & Recommendations
 
