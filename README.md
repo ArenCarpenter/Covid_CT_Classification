@@ -1,4 +1,4 @@
-# Covid19_CT_Classification (WIP)
+# Classifying Covid-19 from CT Scans (WIP)
 
 **Aren Carpenter**
 
@@ -40,9 +40,9 @@ Here we see some randomly sampled images from each class.
 
 I created a "Mean Image" for each class by averaging each pixel across all images in that class. On the left we have the average Covid positive image, and on the right the average Covid negative image. The positive image is much hazier because the presence of Covid-19 infections leave white areas in the affected areas of the lungs. Averaged across all positive images, all areas of the lungs are affected which is why we see haze across the entire image. 
 
-<p float="middle">
-  <img src="Images/Average_Covid.png" width="500"/>
-  <img src="Images/Average_Not_Covid.png" width="500"/>
+<p float="left">
+  <img src="Images/Average_Covid.png" width="400"/>
+  <img src="Images/Average_Not_Covid.png" width="400"/>
 </p>
 
 ## Modeling
