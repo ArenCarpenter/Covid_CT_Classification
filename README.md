@@ -34,11 +34,15 @@ This [paper](https://arxiv.org/pdf/2003.13865.pdf) describes the collection and 
 
 ## Exploratory Data Analysis
 
-Here we see some randomly sampled images from each class. 
+### Sample Images
+
+Here we see some randomly sampled images from each class. The Covid positive images have a "broken glass" like texture and areas of white signifying where infection has taken hold. 
 
 ![](Images/sample_images.png)
 
-I created a "Mean Image" for each class by averaging each pixel across all images in that class. On the left we have the average Covid positive image, and on the right the average Covid negative image. The positive image is much hazier because the presence of Covid-19 infections leave white areas in the affected areas of the lungs. Averaged across all positive images, all areas of the lungs are affected which is why we see haze across the entire image. 
+### Mean Image
+
+The mean image for each class was created by averaging each pixel across all images in a class. On the left we have the average Covid positive image, and on the right the average Covid negative image. The positive image is much hazier because the presence of Covid-19 infections leave white areas in the affected areas of the lungs. Averaged across all positive images, all areas of the lungs are affected which is why we see haze across the entire image. 
 
 <p float="left">
   <img src="Images/Average_Covid.png" width="400"/>
