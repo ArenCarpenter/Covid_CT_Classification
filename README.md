@@ -53,6 +53,14 @@ The mean image for each class was created by averaging each pixel across all ima
 
 I utilized the Keras framework for developing a CNN model for classifying Covid-19 from patient CT scans. I iteratively expanded the model architecture from simple, single Conv2D layers to multiple sets of Conv2D layer blocks -- where multiple convolutions are performed before a MaxPooling layer. 
 
+My best performing model had 3x3 convolutional layers with padding separated by MaxPooling layers before flattening and two hidden fully connected layers. ReLu activation functions where used in all layers except for the final sigmoid function for the output prediction. Binary cross-entropy was used as the loss function and RMSprop was the optimization function. 
+
+Data augmentation was utilized throughout my iterative process and always improved validation metrics, for the final model I used the following augmentation parameters from the ImageDataGenerator object: brightness_range = (0.6, 1.0), rotation_range = 15, zoom_range = 0.2, horizontal_flip=True. The model was trained for 15 epochs. 
+
+### Model Architecture
+
+![](Images/Model_Architecture.png)
+
 ## Insights & Recommendations
 
 ## Next Steps
