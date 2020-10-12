@@ -61,6 +61,27 @@ Data augmentation was utilized throughout my iterative process and always improv
 
 ![](Images/Model_Architecture.png)
 
+### Modeling Evaluation
+
+A selection of my iterative modeling process. 
+
+Model | Validation Loss | Validation Accuracy | Test Accuracy
+------| -----| -------| ------
+2 Conv2D, 1 Dense | 0.8533 | 0.7952 | 0.8333
+3 Conv2D, 2 Dense | 0.9695 | 0.8675 | 0.7821
+3 Conv2D, 2 Dense / Padding | 0.4070 | 0.8554 | 0.7692
+3 Conv2D, 2 Dense / Padding / Augmented Data | 0.3381 | 0.8554 | 0.8462
+3 Conv2D, 2 Dense / Padding / Extra Augmented Data | 0.2974 | 0.8434 | 0.8590
+3x2 Conv2D, 2 Dense / Padding / Extra Augmented Data | 0.3164 | 0.8554 | 0.8590
+**3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data** | **0.2390** | **0.9036** | **0.9231**
+4x3 Conv2D, 2 Dense / Padding / Extra Augmented Data | 0.4030 | 0.7952 | 0.7949
+3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.25 Dropout | 0.3642 | 0.8795 | 0.9103
+3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.4 Dropout | 0.4694 | 0.8554 | 0.8462
+3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.2 Dropout | 0.3895 | 0.8554 | 0.8077
+3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.25 Dropout / Adam | 0.6542 | 0.6386 | 0.6538
+
 ## Insights & Recommendations
+
+
 
 ## Next Steps
