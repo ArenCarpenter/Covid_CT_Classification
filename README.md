@@ -80,6 +80,12 @@ Model | Validation Loss | Validation Accuracy | Test Accuracy
 3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.2 Dropout | 0.3895 | 0.8554 | 0.8077
 3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.25 Dropout / Adam | 0.6542 | 0.6386 | 0.6538
 
+### Confusion Matrix
+
+![](Images/confusion_matrix.png)
+
+Our model appears to be accurate and harmonious, in that it equally balances false positives and false negatives. This is reflected in its high F1 score of .90.
+
 ## Insights & Recommendations
 
 
