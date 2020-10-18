@@ -88,6 +88,12 @@ Our model appears to be accurate and harmonious, in that it equally balances fal
 
 ## Insights & Recommendations
 
-
+I developed an effective model for diagnosing Covid-19 from CT scans. The most pressing issue currently is the lack of available data in this domain. Publicly available, de-identified medical imaging is always challenging to collect, but, with the recency of Covid, it is even more difficult.
 
 ## Next Steps
+
+### Product Improvements
+
+To improve the model as new data is made available, I could create a pipeline to incorporate this new data and re-evaluate the model after certain increases in the training data set. 
+
+### Model Improvements
