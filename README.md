@@ -4,8 +4,6 @@
 
 September/October 2020
 
-Submission for Grand Challenge's 'CT Diagnosis of Covid-19' challenge. It is a binary classification problem for determining the presence of Covid-19 solely from CT scans of patients. 
-
 ## Introduction & Social Case
 
 Few outbreaks in modern history have had as large of a public health and economic effect as Covid-19. While a vaccine is still in progress, physicians need cheap and effective techniques for identifying Covid-19 positive patients. 
@@ -67,17 +65,17 @@ A selection of my iterative modeling process.
 
 Model | Validation Loss | Validation Accuracy | Test Accuracy
 ------| -----| -------| ------
-2 Conv2D, 1 Dense | 0.8533 | 0.7952 | 0.8333
-3 Conv2D, 2 Dense | 0.9695 | 0.8675 | 0.7821
-3 Conv2D, 2 Dense / Padding | 0.4070 | 0.8554 | 0.7692
-3 Conv2D, 2 Dense / Padding / Augmented Data | 0.3381 | 0.8554 | 0.8462
-3 Conv2D, 2 Dense / Padding / Extra Augmented Data | 0.2974 | 0.8434 | 0.8590
-3x2 Conv2D, 2 Dense / Padding / Extra Augmented Data | 0.3164 | 0.8554 | 0.8590
-**3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data** | **0.2390** | **0.9036** | **0.9231**
-4x3 Conv2D, 2 Dense / Padding / Extra Augmented Data | 0.4030 | 0.7952 | 0.7949
-3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.25 Dropout | 0.3642 | 0.8795 | 0.9103
-3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.4 Dropout | 0.4694 | 0.8554 | 0.8462
-3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.2 Dropout | 0.3895 | 0.8554 | 0.8077
+2 Conv2D, 1 Dense                                                          | 0.8533 | 0.7952 | 0.8333
+3 Conv2D, 2 Dense                                                          | 0.9695 | 0.8675 | 0.7821
+3 Conv2D, 2 Dense / Padding                                                | 0.4070 | 0.8554 | 0.7692
+3 Conv2D, 2 Dense / Padding / Augmented Data                               | 0.3381 | 0.8554 | 0.8462
+3 Conv2D, 2 Dense / Padding / Extra Augmented Data                         | 0.2974 | 0.8434 | 0.8590
+3x2 Conv2D, 2 Dense / Padding / Extra Augmented Data                       | 0.3164 | 0.8554 | 0.8590
+**3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data**                   | **0.2390** | **0.9036** | **0.9231**
+4x3 Conv2D, 2 Dense / Padding / Extra Augmented Data                       | 0.4030 | 0.7952 | 0.7949
+3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.25 Dropout        | 0.3642 | 0.8795 | 0.9103
+3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.4 Dropout         | 0.4694 | 0.8554 | 0.8462
+3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.2 Dropout         | 0.3895 | 0.8554 | 0.8077
 3x3 Conv2D, 2 Dense / Padding / Extra Augmented Data / 0.25 Dropout / Adam | 0.6542 | 0.6386 | 0.6538
 
 ### Confusion Matrix
@@ -97,3 +95,5 @@ I developed an effective model for diagnosing Covid-19 from CT scans. The most p
 To improve the model as new data is made available, I could create a pipeline to incorporate this new data and re-evaluate the model after certain increases in the training data set. 
 
 ### Model Improvements
+
+As above, a lack of data is the main drawback for the model. As with most medical imaging data, there is an inherent class imbalance problem as most patients don't have any specific condition. It is not rare to see datasets with only 3-5% positive class observations, which can make training effective models difficult. There are various methods for addressing this class imbalance, such as upsampling or synthetic approaches like SMOTE, that could be used here given additional observations.
